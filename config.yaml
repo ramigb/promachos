@@ -1,0 +1,28 @@
+# Configuration for LLM Prompting Framework
+# This file contains user-specific settings for the current project
+
+project:
+  name: "My Project"
+  type: "development"  # development, research, analysis, creative
+  language: "python"   # primary programming language if applicable
+  
+behavior:
+  verbosity: "normal"  # minimal, normal, verbose
+  ask_before_execute: true
+  auto_save_interval: 5  # minutes
+  max_retries: 3
+  
+output:
+  format: "markdown"  # markdown, plain, json
+  include_timestamps: true
+  include_reasoning: false
+  
+tools:
+  enable_web_search: false
+  enable_code_execution: false
+  enable_file_operations: true
+  
+context:
+  max_history: 50  # number of interactions to remember
+  summarize_after: 20  # summarize context after N interactions
+  preserve_key_decisions: true

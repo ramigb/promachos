@@ -1,0 +1,42 @@
+{
+  "project_name": "My Project",
+  "status": "not_started",
+  "start_date": null,
+  "last_updated": null,
+  "completion_percentage": 0,
+  "phases": {
+    "planning": {
+      "status": "not_started",
+      "completion": 0,
+      "notes": ""
+    },
+    "development": {
+      "status": "not_started",
+      "completion": 0,
+      "notes": ""
+    },
+    "testing": {
+      "status": "not_started",
+      "completion": 0,
+      "notes": ""
+    },
+    "deployment": {
+      "status": "not_started",
+      "completion": 0,
+      "notes": ""
+    }
+  },
+  "completed_tasks": [],
+  "current_task": null,
+  "blockers": [],
+  "decisions": [],
+  "metrics": {
+    "total_tasks": 0,
+    "completed_tasks": 0,
+    "time_spent_hours": 0,
+    "lines_of_code": 0,
+    "artifacts_created": 0
+  },
+  "next_steps": [],
+  "notes": ""
+}
