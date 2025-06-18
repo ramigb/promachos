@@ -1,6 +1,11 @@
 # Configuration for LLM Prompting Framework
 # This file contains user-specific settings for the current project
 
+framework:
+  version: "1.0"
+  author: "Rami GB"
+  repository: "https://github.com/ramigb/promachos"
+
 project:
   name: "My Project"
   type: "development"  # development, research, analysis, creative

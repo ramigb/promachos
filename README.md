@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="logo.png" alt="Promachos Logo" width="200" height="200">
+  <img src="assets/logo.png" alt="Promachos Logo" width="200" height="200">
   
   # PROMACHOS
   ### LLM Prompting Framework
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Framework Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/yourusername/prompting-framework)
+  [![Framework Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/ramigb/promachos)
   
   *A structured approach for LLMs to work on projects systematically*
 </div>
@@ -167,7 +167,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📊 Version
 
 - **Framework Version:** 1.0
-- **Last Updated:** 2024-01-01
+- **Last Updated:** 2025-06-18
+- **Author:** Rami GB
 
 ---
 
