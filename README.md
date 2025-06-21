@@ -37,6 +37,7 @@
 - 📋 **Audit Trail** - Track all AI decisions and changes
 - ⚙️ **Team Standards** - Enforce consistent AI assistance quality
 - 🏢 **Organizational Governance** - Scalable framework for enterprise AI adoption
+- 🤖 **AI Agent Integration** - Auto-discovery for Claude, Copilot, Cursor, etc.
 
 ### ✨ Protocol Features
 
@@ -156,6 +157,34 @@ your-project/
 | `context.md` | Decision history & key insights | AI (supervised) |
 | `progress.json` | Quantified progress metrics | AI |
 | `tasks.json` | Structured task breakdown | Humans + AI |
+
+## 🤖 AI Agent Integration
+
+### Auto-Discovery for Coding Assistants
+
+When you run `promachos init`, it creates an AI instructions file in your project root that coding assistants automatically discover:
+
+- **Claude Code**: Creates `CLAUDE.md` with protocol instructions
+- **GitHub Copilot**: Creates `COPILOT.md` for Copilot awareness
+- **ChatGPT**: Creates `CHATGPT.md` for GPT integration
+- **Cursor**: Creates `CURSOR.md` for Cursor IDE
+- **Generic**: Creates `AI_ASSISTANT.md` for any AI tool
+
+### How It Works
+
+1. **Automatic Detection**: AI agents see the instructions file immediately
+2. **Protocol Awareness**: The AI understands it should follow Promachos Protocol
+3. **State Management**: AI knows where to find and update protocol files
+4. **Consistent Behavior**: Same quality regardless of which AI tool you use
+
+### Example: Claude Code
+
+When Claude Code opens a project with Promachos:
+```
+Claude: "I see CLAUDE.md - I acknowledge the Promachos Protocol is active. 
+Let me check .promachos/progress.json... You're 45% complete on the auth module. 
+Should I continue where the last session left off?"
+```
 
 ## 🎯 Supported Collaboration Contexts
 

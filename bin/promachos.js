@@ -11,13 +11,13 @@ import { configCommand } from '../src/commands/config.js';
 console.log(chalk.cyan(`
 ╔═══════════════════════════════════════╗
 ║        PROMACHOS CLI v1.0.0           ║
-║    AI-Powered Project Framework       ║
+║    Human-AI Collaboration Protocol    ║
 ╚═══════════════════════════════════════╝
 `));
 
 program
   .name('promachos')
-  .description('AI-powered project management framework for LLMs')
+  .description('Standardized protocol for human-AI collaboration')
   .version('1.0.0');
 
 // Init command

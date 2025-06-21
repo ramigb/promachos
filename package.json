@@ -1,6 +1,6 @@
 {
   "name": "promachos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standardized protocol for human-AI collaboration - making AI assistance predictable, trackable, and scalable",
   "main": "src/index.js",
   "type": "module",
@@ -21,6 +21,7 @@
     "onboard.md",
     "PROTOCOL.md",
     "INSTALL.md",
+    "AI_INTEGRATION.md",
     "prompts/",
     "README.md",
     "LICENSE"

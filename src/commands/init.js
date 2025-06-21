@@ -72,6 +72,11 @@ export async function initCommand(options) {
       }
     };
 
+    // Set default AI assistant for auto mode
+    if (options.auto) {
+      config.project.ai_assistant = 'claude';
+    }
+
     // Interactive setup unless auto mode
     if (!options.auto) {
       console.log(chalk.blue('\n🔧 Configuration Setup:'));
@@ -128,6 +133,19 @@ export async function initCommand(options) {
           name: 'autoCopy',
           message: 'Automatically copy prompts to clipboard?',
           default: false
+        },
+        {
+          type: 'list',
+          name: 'aiAssistant',
+          message: 'Which AI assistant will you primarily use?',
+          choices: [
+            { name: 'Claude (Anthropic)', value: 'claude' },
+            { name: 'ChatGPT (OpenAI)', value: 'chatgpt' },
+            { name: 'GitHub Copilot', value: 'copilot' },
+            { name: 'Cursor', value: 'cursor' },
+            { name: 'Other/Multiple', value: 'generic' }
+          ],
+          default: 0
         }
       ]);
 
@@ -138,6 +156,7 @@ export async function initCommand(options) {
       config.behavior.explain_reasoning = answers.explainReasoning;
       config.behavior.ask_before_execute = answers.askBeforeExecute;
       config.cli.auto_copy_clipboard = answers.autoCopy;
+      config.project.ai_assistant = answers.aiAssistant;
     }
 
     // Initialize project
@@ -149,15 +168,28 @@ export async function initCommand(options) {
       initSpinner.succeed('Promachos initialized successfully!');
       
       console.log(chalk.green('\n✅ Setup Complete!'));
+      
+      // Determine AI instructions filename
+      const aiFileNames = {
+        'claude': 'CLAUDE.md',
+        'chatgpt': 'CHATGPT.md',
+        'copilot': 'COPILOT.md',
+        'cursor': 'CURSOR.md',
+        'generic': 'AI_ASSISTANT.md'
+      };
+      const aiFileName = aiFileNames[config.project.ai_assistant] || 'AI_ASSISTANT.md';
+      
       console.log(chalk.gray('\nCreated:'));
+      console.log(chalk.gray(`  ${aiFileName.padEnd(28)} # AI assistant instructions`));
       console.log(chalk.gray('  .promachos/'));
-      console.log(chalk.gray('  ├── config.yaml'));
-      console.log(chalk.gray('  ├── project.md'));
-      console.log(chalk.gray('  ├── context.md'));
-      console.log(chalk.gray('  ├── progress.json'));
-      console.log(chalk.gray('  ├── tasks.json'));
-      console.log(chalk.gray('  ├── artifacts/'));
-      console.log(chalk.gray('  └── logs/'));
+      console.log(chalk.gray('  ├── README.md               # Protocol directory guide'));
+      console.log(chalk.gray('  ├── config.yaml             # Collaboration rules'));
+      console.log(chalk.gray('  ├── project.md              # Project description'));
+      console.log(chalk.gray('  ├── context.md              # Decision history'));
+      console.log(chalk.gray('  ├── progress.json           # Progress tracking'));
+      console.log(chalk.gray('  ├── tasks.json              # Task management'));
+      console.log(chalk.gray('  ├── artifacts/              # AI outputs'));
+      console.log(chalk.gray('  └── logs/                   # Audit trail'));
 
       console.log(chalk.blue('\n🚀 Next Steps:'));
       console.log(`   1. ${chalk.cyan('promachos start')} - Generate your first AI prompt`);
