@@ -1,0 +1,56 @@
+# Development files
+node_modules/
+*.log
+.env
+.env.*
+
+# Test and example files
+test-project/
+examples/
+test/
+*.test.js
+*.spec.js
+
+# Development and build artifacts
+.DS_Store
+*.swp
+*.swo
+*~
+.cache/
+.nyc_output/
+coverage/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Documentation development
+docs-dev/
+*.draft.md
+
+# Git files
+.git/
+.gitignore
+
+# CI/CD files
+.github/
+.travis.yml
+.circleci/
+
+# Package lock files (let users choose their package manager)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Local configuration
+config.local.*
+.promachos/
+artifacts/
+promachos_framework_*.md
+promachos_framework_*.txt
+
+# Build artifacts from the old Python system
+build.py
+__pycache__/
+*.pyc

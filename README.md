@@ -2,176 +2,380 @@
   <img src="assets/logo.png" alt="Promachos Logo" width="200" height="200">
   
   # PROMACHOS
-  ### LLM Prompting Framework
+  ### Human-AI Collaboration Protocol
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Framework Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/ramigb/promachos)
+  [![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)](https://nodejs.org/)
   
-  *A structured approach for LLMs to work on projects systematically*
+  *A standardized protocol for consistent, trackable, and collaborative work between humans and AI agents*
 </div>
 
 ---
 
-## 🎯 Overview
+## 🎯 What is Promachos?
 
-**Promachos** is a powerful framework that provides a structured approach for Large Language Models (LLMs) to work on projects systematically. By separating configuration, project details, progress tracking, and outputs into distinct files, it ensures better organization and optimal context management.
+**Promachos** is a collaboration protocol that establishes a standardized "contract" between humans and AI agents. Think of it as the "Git workflow" for AI-assisted development - providing structure, consistency, and accountability for teams working with LLMs.
 
-### ✨ Key Features
+### 🚨 The Problem We Solve
 
-- 📁 **Organized Structure** - Clear separation of concerns with dedicated files for each aspect
-- 🔄 **Progress Tracking** - Automated tracking of project progress and task completion
-- 🎨 **Customizable** - Flexible configuration to match your project needs
-- 📝 **Context Preservation** - Maintains conversation history across sessions
-- 🚀 **Quick Onboarding** - Get started in minutes with our streamlined setup
+**The AI Collaboration "Wild West":**
+- Teams improvise different ways to work with AI
+- No standard handoff procedures between team members
+- Context gets lost between AI sessions
+- Inconsistent quality of AI assistance
+- No audit trail of AI decisions and changes
+- Difficult to scale AI adoption across organizations
 
-## 📂 Directory Structure
-```
-prompting-framework/
-├── onboard.md               # Quick LLM onboarding (start here)
-├── config.yaml              # User configuration
-├── core.md                  # Core framework logic & system instructions
-├── project.md               # Current project description
-├── project_progress.json    # Structured progress tracking
-├── context.md               # Conversation history/memory
-├── tasks.json               # Task breakdown and status
-├── prompts/                 # Reusable prompt templates
-│   ├── analyze.md
-│   ├── create.md
-│   └── debug.md
-├── artifacts/               # LLM outputs
-│   └── [timestamp]/         # Organized by session
-├── logs/                    # For debugging
-│   └── errors.log
-└── README.md               # This file
-```
+### 🎯 The Promachos Solution
 
-## 🚀 Getting Started
+**A standardized protocol that provides:**
 
-### 1️⃣ Configure Your Project
-Edit `config.yaml` to set your preferences:
-- Project type and language
-- Behavior preferences
-- Output format
+- 🤝 **Consistent Collaboration** - Standard structure for human-AI interaction
+- 🔄 **Seamless Handoffs** - Team members can pick up where others left off
+- 📊 **Progress Continuity** - Maintain context across multiple AI sessions
+- 📋 **Audit Trail** - Track all AI decisions and changes
+- ⚙️ **Team Standards** - Enforce consistent AI assistance quality
+- 🏢 **Organizational Governance** - Scalable framework for enterprise AI adoption
 
-### 2️⃣ Define Your Project
-Update `project.md` with:
-- Project objectives
-- Requirements
-- Success criteria
-- Timeline
+### ✨ Protocol Features
 
-### 3️⃣ Using the Framework
-When prompting your LLM:
-1. Ask it to read the onboard.md file first
-2. Or provide this quick prompt:
+- 🚀 **Zero-Friction Onboarding** - `promachos init` establishes the protocol
+- 🔍 **Smart Context Detection** - Auto-discovers project structure and needs
+- 📊 **State Management** - Persistent tracking of AI collaboration progress
+- 📋 **Universal AI Compatibility** - Works with ChatGPT, Claude, Copilot, etc.
+- 🎨 **Flexible Implementation** - Adapts to any team workflow
+- 💻 **Cross-Platform** - Consistent experience across environments
 
-**Quick start:**
+## 🚀 Quick Start
+
+### Installation
+
 ```bash
-# Ask your LLM:
-Please read onboard.md in this prompting framework directory to get started.
+# Install globally (recommended)
+npm install -g promachos
+
+# Verify installation
+promachos --version
+
+# Or use without installation
+npx promachos init
 ```
 
-**Detailed start:**
+**Requirements**: Node.js 16+ and npm 7+. See [INSTALL.md](INSTALL.md) for detailed installation instructions.
+
+### Establish the Protocol (30 seconds)
+
 ```bash
-# For a comprehensive setup:
-Please read the core.md file in this project to understand the framework, 
-then load project.md to see what we're working on. Follow the framework 
-guidelines for all work on this project.
+# In your project directory
+cd /path/to/your/project
+promachos init --auto     # Establish protocol structure
+promachos start --copy    # Generate structured AI prompt
 ```
 
-### 4️⃣ Progress Tracking
-The LLM will automatically:
-- Update `project_progress.json` with progress
-- Maintain task status in `tasks.json`
-- Save outputs to `artifacts/` directory
-- Keep conversation context in `context.md`
+Paste the generated prompt into any AI assistant. The AI now understands your project structure, history, and collaboration expectations.
 
-## 📄 File Descriptions
+### The Protocol in Action
 
-### 📋 onboard.md
-Quick onboarding guide for LLMs. Start here for fastest setup - contains the essential workflow and file references in a concise, LLM-optimized format.
+**Before Promachos:**
+```
+Human: "Hey ChatGPT, can you help me refactor this React component?"
+AI: "Sure! Can you share the code and tell me what you want to change?"
+Human: *copies random files, loses context*
+```
 
-### ⚙️ config.yaml
-User-specific configuration for the project. Modify this to control how the LLM behaves.
+**With Promachos:**
+```
+Human: *pastes structured prompt*
+AI: "I see you're working on the auth module (65% complete). Based on the context, you were implementing OAuth integration. The tests are failing on line 47. Should I continue where you left off or would you like me to review the current progress first?"
+```
 
-### 🧠 core.md
-System instructions for the LLM. This file contains the framework logic and operational guidelines.
+## 📖 Protocol Commands
 
-### 📊 project.md
-Your project description. Update this with your specific project details.
+### Establish Protocol Structure
+```bash
+promachos init                    # Interactive protocol setup
+promachos init --auto             # Auto-detect project and establish protocol
+promachos init --type react       # Specify project type for protocol
+```
 
-### 📈 project_progress.json
-Automatically updated by the LLM to track progress, including completion percentage, phases, and metrics.
+### Generate Collaboration Prompt
+```bash
+promachos start                   # Create structured AI prompt
+promachos start --copy            # Copy to clipboard
+promachos start --browser         # Open browser with prompt
+promachos start --minimal         # Compact prompt for token limits
+```
 
-### 💭 context.md
-Maintains conversation history and key decisions across sessions.
+### Monitor Collaboration State
+```bash
+promachos status                  # Show current protocol state
+promachos status --json           # Machine-readable output
+promachos status --verbose        # Detailed collaboration history
+```
 
-### ✅ tasks.json
-Detailed task tracking with status, priorities, and dependencies.
+### Configure Protocol Behavior
+```bash
+promachos config                         # Show protocol configuration
+promachos config behavior.verbosity     # Get AI interaction preference
+promachos config cli.auto_copy true     # Set collaboration preference
+promachos config --edit                 # Open protocol config in editor
+```
 
-### 📝 prompts/
-Reusable templates for common operations:
-- `analyze.md`: For analyzing code or documents
-- `create.md`: For generating new content
-- `debug.md`: For troubleshooting issues
+### Export Protocol State
+```bash
+promachos build                   # Build complete protocol prompt
+promachos build --minimal         # Token-optimized version
+promachos build --output ./collaboration-state.txt
+```
 
-### 💾 artifacts/
-All LLM outputs are saved here, organized by timestamp.
+## 📂 Protocol Structure
 
-### 🔍 logs/
-Error logs and debugging information.
+After establishing the protocol, Promachos creates:
 
-## 💡 Best Practices
+```
+your-project/
+├── .promachos/                      # Protocol state directory
+│   ├── config.yaml                  # Collaboration rules & preferences
+│   ├── project.md                   # Standardized project description
+│   ├── context.md                   # Human-AI interaction history
+│   ├── progress.json                # Quantified collaboration progress
+│   ├── tasks.json                   # Structured task tracking
+│   ├── artifacts/                   # AI-generated outputs
+│   │   └── build_*/                 # Protocol state snapshots
+│   └── logs/                        # Collaboration audit trail
+└── [your project files]             # Your actual codebase
+```
 
-1. **Regular Updates**: Ensure the LLM updates progress files after each work session
-2. **Clear Project Definition**: The clearer your project.md, the better the results
-3. **Configuration Tuning**: Adjust config.yaml based on your needs
-4. **Task Breakdown**: Encourage the LLM to break large projects into smaller tasks
-5. **Context Preservation**: Review context.md periodically to ensure important information is retained
+### Protocol Files Explained
 
-## 🎨 Customization
+| File | Purpose | Who Updates |
+|------|---------|-------------|
+| `config.yaml` | AI behavior rules & team preferences | Humans |
+| `project.md` | Structured project context | Humans + AI |
+| `context.md` | Decision history & key insights | AI (supervised) |
+| `progress.json` | Quantified progress metrics | AI |
+| `tasks.json` | Structured task breakdown | Humans + AI |
 
-Feel free to:
-- Add more prompt templates in the `prompts/` directory
-- Extend the configuration options in `config.yaml`
-- Modify the progress tracking structure in JSON files
-- Add additional metadata fields as needed
+## 🎯 Supported Collaboration Contexts
 
-## 🔧 Troubleshooting
+Promachos establishes protocols for:
 
-If issues arise:
-1. Check `logs/errors.log` for error messages
-2. Verify all files are properly formatted (valid YAML/JSON)
-3. Ensure the LLM has read the core.md instructions
-4. Review the context.md for any missed information
+- **Frontend Projects**: React, Vue, Angular, Svelte, Next.js
+- **Backend Systems**: Node.js, Express, Python, Django, Flask
+- **Mobile Development**: React Native, Flutter
+- **Languages**: JavaScript, TypeScript, Python, Java, Go, Rust, PHP, Ruby
+- **Any codebase**: Universal protocol adaptable to any technology
 
-## 🤝 Contributing
+## 💡 Team Collaboration Examples
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+### Scenario 1: Team Handoff
+```bash
+# Developer A (Monday)
+$ cd user-auth-feature
+$ promachos init --auto
+$ promachos start --copy
+[Works with AI assistant, makes progress]
 
+# Developer B (Tuesday)  
+$ promachos start
+📊 Protocol State: user-auth-feature
+📊 Previous Context: OAuth integration 60% complete
+📊 Last Session: Added JWT middleware, tests failing
+📋 Structured handoff prompt ready!
+```
+
+### Scenario 2: Multi-Session Complex Work
+```bash
+# Week 1: Architecture Planning
+$ promachos start
+AI: "I see this is a new e-commerce platform. Let's start with the database schema..."
+
+# Week 2: Implementation
+$ promachos start  
+AI: "Continuing from last week's architecture. The user service is complete. Should I proceed with the payment integration as planned?"
+
+# Week 3: Testing & Refinement
+$ promachos start
+AI: "The payment system is now integrated. I notice 3 remaining test failures. Based on our progress tracking, we're 85% complete..."
+```
+
+### Scenario 3: Code Review with AI
+```bash
+$ promachos start
+AI: "I see 47 changed files since last session. The authentication module looks good, but I notice potential security issues in the password reset flow. Should I provide specific recommendations?"
+```
+
+## ⚙️ Protocol Configuration
+
+### Collaboration Rules (`.promachos/config.yaml`)
+```yaml
+project:
+  name: my-app
+  type: react
+  framework: React
+
+behavior:
+  verbosity: balanced           # How detailed should AI responses be?
+  explain_reasoning: true       # Should AI explain its decisions?
+  ask_before_execute: true      # Require human approval for changes?
+  max_context_size: 8000        # Token limit for AI context
+
+collaboration:
+  update_progress: true         # AI should update progress.json
+  track_decisions: true         # Log important decisions to context.md
+  require_task_breakdown: true  # AI must break work into tasks
+
+quality:
+  code_review_level: standard   # thoroughness of AI code review
+  test_requirements: true       # AI must consider test coverage
+  documentation_level: standard # level of documentation expected
+```
+
+### Team Standards (`~/.config/promachos/config.yaml`)
+Organization-wide collaboration standards that apply to all projects.
+
+### Protocol Governance
+```yaml
+# Example enterprise configuration
+governance:
+  require_approval: ["database_changes", "security_updates"]
+  audit_trail: true
+  compliance_mode: "strict"
+  allowed_ai_models: ["gpt-4", "claude-3"]
+```
+
+## 🔧 Advanced Protocol Usage
+
+### Custom Collaboration Patterns
+```bash
+promachos init --type custom
+# Then define custom collaboration rules in .promachos/project.md
+```
+
+### Team Workflow Integration
+```bash
+# In package.json (team standard)
+{
+  "scripts": {
+    "ai": "promachos start --copy",
+    "ai-handoff": "promachos status --verbose",
+    "ai-review": "promachos start --minimal"
+  }
+}
+```
+
+### Enterprise Integration
+```javascript
+import { Promachos } from 'promachos';
+
+// Programmatic protocol management
+const promachos = new Promachos('./project');
+await promachos.init({ 
+  auto: true,
+  governance: 'enterprise',
+  auditLevel: 'strict'
+});
+
+const collaborationState = await promachos.build({ minimal: true });
+// Send to approved AI models only
+```
+
+## 🎨 Protocol Optimization
+
+Promachos optimizes collaboration for different contexts:
+
+- **Standard Protocol**: ~3,000-4,000 tokens (full context & history)
+- **Minimal Protocol**: ~2,000-2,500 tokens (essential context only)
+- **Smart Context**: Automatically includes relevant previous decisions
+- **Token Budget**: Respects AI model limits while preserving critical context
+
+## 🤝 Collaboration Best Practices
+
+### For Teams Adopting Promachos:
+
+1. **Establish Protocol**: Use `promachos init` consistently across team
+2. **Maintain State**: Let AI update protocol files after significant work
+3. **Document Decisions**: Important choices get saved to `context.md`
+4. **Regular Status**: Use `promachos status` for team standups
+5. **Clean Handoffs**: Always run `promachos start` when taking over work
+
+### For AI Assistants:
+
+When you receive a Promachos prompt, you should:
+1. **Acknowledge Protocol**: Confirm you understand the structured context
+2. **Check Progress**: Review current status and previous decisions
+3. **Follow Rules**: Respect the collaboration preferences in config.yaml
+4. **Update State**: Maintain progress.json and context.md throughout work
+5. **Structured Output**: Save deliverables to artifacts/ directory
+
+## 🏢 Enterprise & Team Adoption
+
+### Why Organizations Choose Promachos
+
+**Governance & Compliance:**
+- Audit trails for all AI interactions
+- Standardized approval workflows
+- Compliance with security policies
+- Risk management for AI-generated code
+
+**Team Efficiency:**
+- Consistent AI assistance quality
+- Reduced onboarding time for AI tools
+- Knowledge preservation across team members
+- Measurable productivity improvements
+
+**Scalability:**
+- Organization-wide standards
+- Integration with existing workflows
+- Support for multiple AI models
+- Cross-project collaboration patterns
+
+### Implementation Roadmap
+
+**Phase 1**: Pilot team adopts Promachos protocol
+**Phase 2**: Establish organization-wide standards
+**Phase 3**: Integration with CI/CD and governance tools
+**Phase 4**: Custom enterprise features and compliance
+
+## 🛠️ Protocol Development
+
+### Contributing to the Protocol
+```bash
+git clone https://github.com/ramigb/promachos.git
+cd promachos
+npm install
+chmod +x bin/promachos.js
+
+# Test protocol implementation
+./bin/promachos.js init --auto
+```
+
+### Protocol Evolution
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Propose protocol improvements
+3. Test with real team scenarios
+4. Submit detailed pull request
+5. Community review and adoption
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- Thanks to all contributors who have helped shape this framework
-- Inspired by the need for better LLM project organization
-
-## 📊 Version
-
-- **Framework Version:** 1.0
-- **Last Updated:** 2025-06-18
-- **Author:** Rami GB
+- Inspired by teams struggling with inconsistent AI collaboration
+- Built for the era of AI-assisted software development
+- Designed to bring order to the "Wild West" of AI tooling
+- Thank you to early adopters who helped refine the protocol
 
 ---
 
 <div align="center">
-  Made with ❤️ for better LLM workflows
+  
+  ### The Future of Human-AI Collaboration Starts Here
+  
+  **Promachos Protocol**: *Making AI collaboration predictable, trackable, and scalable*
+  
+  [Protocol Documentation](https://promachos.dev) • [Team Examples](https://github.com/ramigb/promachos/examples) • [Community](https://discord.gg/promachos)
 </div>

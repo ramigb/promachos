@@ -1,62 +1,73 @@
-# LLM ONBOARDING - READ THIS FIRST
+# PROMACHOS PROTOCOL ONBOARDING
 
-## FRAMEWORK OVERVIEW
-Structured project management system. Follow these files in order.
+## PROTOCOL ACKNOWLEDGMENT
+You are operating under the **Promachos Collaboration Protocol** - a standardized framework for human-AI collaboration that ensures consistent, trackable, and accountable assistance.
 
-## CRITICAL FILES
-1. `core.md` - System instructions, operational guidelines
-2. `config.yaml` - User preferences (verbosity, tools, behavior)
-3. `project.md` - Current project details, requirements, scope
-4. `project_progress.json` - Progress tracking (update after work)
-5. `tasks.json` - Task breakdown and status (update regularly)
-6. `context.md` - Conversation memory (append important decisions)
+## COLLABORATION CONTRACT
+This protocol establishes:
+- Structured interaction patterns for team consistency
+- State management for seamless handoffs
+- Audit trails for accountability and governance
+- Quality standards for reliable AI assistance
 
-## WORKFLOW
+## PROTOCOL FILES
+1. `core.md` - Complete protocol specification and collaboration rules
+2. `config.yaml` - Collaboration contract and AI behavior rules
+3. `project.md` - Structured project context and team objectives
+4. `progress.json` - Quantified progress metrics and current phase
+5. `tasks.json` - Structured task breakdown with clear ownership
+6. `context.md` - Decision history for team continuity and handoffs
+
+## PROTOCOL WORKFLOW
 ```
-START:
-1. Read config.yaml → understand preferences
-2. Read project.md → understand goals
-3. Check project_progress.json → see current state
-4. Check tasks.json → identify next work
-5. Review context.md → recall past decisions
+SESSION START:
+1. Acknowledge Promachos Protocol understanding
+2. Load collaboration rules from config.yaml
+3. Assess current state: progress.json + context.md
+4. Identify handoff context from previous team members
+5. Establish session goals within protocol framework
 
-WORK:
-1. Select task from tasks.json
-2. Use prompts/*.md templates when applicable
-3. Save outputs to artifacts/[timestamp]/
-4. Update project_progress.json
-5. Update tasks.json status
-6. Log errors to logs/errors.log
+COLLABORATION:
+1. Follow established behavior rules and preferences
+2. Update progress indicators systematically
+3. Document all significant decisions in context.md
+4. Save deliverables to artifacts/ with timestamps
+5. Maintain task status and ownership in tasks.json
 
-END:
-1. Summarize work in context.md
-2. Update all progress files
-3. Note next steps in project_progress.json
+SESSION END:
+1. Update progress.json with completion metrics
+2. Document key decisions and insights in context.md
+3. Prepare handoff notes for next team member/session
+4. Ensure all outputs meet protocol quality standards
 ```
 
-## OUTPUT RULES
-- All generated content → `artifacts/YYYY-MM-DD_HH-MM-SS/`
-- Follow output format from config.yaml
-- Include metadata in outputs
+## STATE MANAGEMENT
+- **Progress Tracking**: Real-time updates to progress.json
+- **Decision History**: Document rationale in context.md
+- **Task Ownership**: Clear assignment and status in tasks.json
+- **Deliverable Provenance**: Timestamped artifacts with metadata
 
-## TEMPLATES
-- `prompts/analyze.md` - Use for analysis tasks
-- `prompts/create.md` - Use for generation tasks  
-- `prompts/debug.md` - Use for troubleshooting
+## COLLABORATION RULES
+- **Consistency**: Maintain predictable behavior across all interactions
+- **Transparency**: Explain reasoning when protocol requires it
+- **Accountability**: Follow approval requirements in config
+- **Continuity**: Structure all updates for seamless team handoffs
+- **Quality**: Meet professional standards defined in collaboration contract
 
-## KEY BEHAVIORS
-- Respect `ask_before_execute` in config
-- Match `verbosity` setting
-- Update progress files after each milestone
-- Break large tasks into subtasks
-- Document decisions in context.md
+## PROTOCOL COMPLIANCE
+Required behaviors:
+- Acknowledge protocol understanding at session start
+- Follow verbosity and approval settings in config.yaml
+- Update all protocol files systematically
+- Maintain audit trail of decisions and changes
+- Prepare structured handoffs for team continuity
 
 ## QUICK START
 ```
-1. Read this file
-2. Read core.md for detailed instructions
-3. Load project.md
-4. Begin work following the workflow above
+1. Confirm: "I acknowledge the Promachos Protocol"
+2. Load: Read core.md for complete specification
+3. Assess: Review current project state and handoff context
+4. Begin: Collaborate following established protocol rules
 ```
 
-END OF ONBOARDING. Proceed to core.md for detailed instructions.
+PROTOCOL ACTIVE. Proceed to core.md for complete collaboration specification.
