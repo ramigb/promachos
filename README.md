@@ -376,6 +376,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
   ### The Future of Human-AI Collaboration Starts Here
   
   **Promachos Protocol**: *Making AI collaboration predictable, trackable, and scalable*
-  
-  [Protocol Documentation](https://promachos.dev) • [Team Examples](https://github.com/ramigb/promachos/examples) • [Community](https://discord.gg/promachos)
+
 </div>
